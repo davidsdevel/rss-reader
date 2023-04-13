@@ -1,0 +1,48 @@
+# Plan for RSS Reader
+
+Features
+[ ] Store RSS urls per user
+[ ] Retrieve the latest one since last login
+[ ] Delete URLs
+[ ] List Urls
+[ ] Create API enpoint
+[ ] Create API key management
+[ ] Create API key auth
+[ ] ISR
+[ ] Create Read list
+[ ] Create shareable URL to read list
+
+Dev Model - TDD
+
+Dev
+- API may return: title, description, content, url, id and relevant metadata
+
+Models
+
+- Urls {
+	url
+	site
+	user
+}
+
+- Users {
+	name
+	email
+	password
+}
+
+API
+- GET /feed | Get all feeds
+- GET /feed/:id | redirect to Single feed
+- GET /list | Get list elements 
+- POST /list | Add list item
+- DELETE /list/:id | Delete Item
+- POST /rss | Add URL
+- DELETE /rss | Delete URL
+
+Pages
+
+- / | Landing page or Feed
+- /settings | Admin config
+- /login
+- /signup
